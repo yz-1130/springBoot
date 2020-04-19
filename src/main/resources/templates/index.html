@@ -23,6 +23,37 @@
         </div>
 
 
+        <div class="modal-footer no-margin-top">
+            <ul class="pagination pull-right no-margin">
+
+                <!-- 首页 -->
+                <span>
+                    <a th:href="'/toIndex?pageNum=0'">首页</a>
+                </span>
+
+                <!-- 上一页 -->
+                <span th:if="${articleList.hasPrevious()}">
+                    <a th:href="'/toIndex?pageNum=' + ${articleList.previousPageable().getPageNumber()}" th:text="上一页"></a>
+                </span>
+
+                <!-- 中间页 -->
+                <span th:each="pageNum:${#numbers.sequence(0, articleList.getTotalPages() - 1)}">
+                    <a th:href="'/toIndex?pageNum=' + ${pageNum}" th:text="${pageNum + 1}" th:if="${pageNum ne articleList.pageable.getPageNumber()}"></a>
+                    <a th:href="'/toIndex?pageNum=' + ${pageNum}" th:text="${pageNum + 1}" th:if="${pageNum eq articleList.pageable.getPageNumber()}" th:style="'font-weight:bold;background: #6faed9;'"></a>
+                </span>
+
+                <!-- 下一页 -->
+                <span th:if="${articleList.hasNext()}">
+                    <a th:href="'/toIndex?pageNum=' + ${articleList.nextPageable().getPageNumber()}" th:text="下一页"></a>
+                </span>
+
+                <!-- 尾页 -->
+                <span>
+                    <a th:href="'/toIndex?pageNum=' + ${articleList.getTotalPages() - 1}">尾页</a>
+                </span>
+
+            </ul>
+        </div>
 
 
     </div>
