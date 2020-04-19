@@ -33,7 +33,7 @@
         <a th:href="@{/}" class="navbar-logo">子慕个人博客小站</a>
         <div class="navbar-menu">
             <form name="logoutform"  method="post"></form>
-            <a class="header-info"  >登录</a>
+            <a class="header-info" th:href="@{http://localhost:8080/toLoginPage}" >登录</a>
             <a class="header-info"  href="javascript:document.logoutform.submit();" >退出</a>
             <!--<a style="color: #fff" >订阅</a>-->
             <a  class="header-info" href="/admin">后台管理</a>
