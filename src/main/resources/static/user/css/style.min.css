@@ -459,6 +459,20 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
     margin: 0 auto
 }
 
+.header-left {
+     font-size: 22px;
+     color: #fff;
+     line-height: 15px;
+     top: 50%;
+     left: 30;
+     display: block;
+     width: auto;
+     max-width: 50%;
+     height: 18px;
+     margin-top: -16px;
+     margin-left: 25px;
+     text-decoration: none
+ }
 .navbar-logo {
     font-size: 22px;
     color: #fff;
@@ -470,6 +484,21 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
     width: auto;
     max-width: 50%;
     height: 22px;
+    margin-top: -16px;
+    margin-left: 25px;
+    text-decoration: none
+}
+.header-right {
+    font-size: 22px;
+    color: #fff;
+    line-height: 24px;
+    position: absolute;
+    top: 50%;
+    left: 300;
+    display: block;
+    width: auto;
+    max-width: 50%;
+    height: 30px;
     margin-top: -16px;
     margin-left: 25px;
     text-decoration: none

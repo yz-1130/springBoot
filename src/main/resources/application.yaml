@@ -1,3 +1,4 @@
+
 spring:
   thymeleaf:
     cache: false #\u8FD9\u91CC\u9875\u9762\u7F13\u5B58\u9ED8\u8BA4\u4E3Atrue\uFF0C\u5F00\u53D1\u8FC7\u7A0B\u4E2D\u53EF\u8BBE\u7F6E\u4E3Afalse
@@ -10,4 +11,5 @@ spring:
   redis:
     host: 127.0.0.1
     port: 6379
-
+server:
+  port: 8083

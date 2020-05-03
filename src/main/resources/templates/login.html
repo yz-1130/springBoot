@@ -9,13 +9,14 @@
 </head>
 <body class="text-center">
 <!--  用户登录form表单 -->
-<form class="form-signin">
+<form class="form-signin" action="/toLoginPage">
     <img class="mb-4" th:src="@{/login/img/login.jpg}" width="72" height="72">
     <h1 class="h3 mb-3 font-weight-normal" th:text="#{login.tip}">请登录</h1>
-    <input type="text" class="form-control"
+    <input type="text" class="form-control" name="username"  id="username"
            th:placeholder="#{login.username}" required="" autofocus="">
-    <input type="password" class="form-control"
+    <input type="password" class="form-control"  name="password"  id="password"
            th:placeholder="#{login.password}" required="">
+
     <div class="checkbox mb-3">
         <label>
             <input type="checkbox" value="remember-me"> [[#{login.rememberme}]]

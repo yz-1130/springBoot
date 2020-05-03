@@ -29,11 +29,15 @@
 </div>
 <![endif]-->
 <header id="header" class="header bg-white">
-    <div class="navbar-container">
-        <a th:href="@{/}" class="navbar-logo">子慕个人博客小站</a>
-        <div class="navbar-menu">
+    <p class="navbar-container">
+<!--        <a th:href="@{/}" class="navbar-logo">子慕个人博客小站</a></p>-->
+        路由端口：<a class="header-left" th:text="${#request.localPort}"></a>==============
+        <a class="header-right" th:text="${session.sid}"></a>
+
+
+    <div class="navbar-menu">
             <form name="logoutform"  method="post"></form>
-            <a class="header-info" th:href="@{http://localhost:8080/toLoginPage}" >登录</a>
+           <a class="header-info" th:href="@{http://localhost:8080/toLoginPage}" >欢迎回来</a>
             <a class="header-info"  href="javascript:document.logoutform.submit();" >退出</a>
             <!--<a style="color: #fff" >订阅</a>-->
             <a  class="header-info" href="/admin">后台管理</a>
